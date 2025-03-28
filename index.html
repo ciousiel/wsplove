@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, orientation=landscape">
+    <title>My HTML5 Structure</title>
+    <style>
+        /* Gradient Background */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, black, purple);
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Responsive Landscape Fix */
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+            body {
+                transform: rotate(90deg);
+                transform-origin: center;
+                width: 100vh;
+                height: 100vw;
+                overflow-x: hidden;
+                position: fixed;
+            }
+        }
+
+        /* Navigation Bar */
+        nav {
+            width: 100%;
+            text-align: center;
+            border-bottom: 2px solid white;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Main Content */
+        article {
+            width: 80%;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Image Gallery */
+        aside {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            aside {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            aside img {
+                width: 80px;
+                height: auto;
+            }
+        }
+
+        aside img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ciousiel</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">I will</a></li>
+            <li><a href="#">Endlessly</a></li>
+            <li><a href="#">Love You</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <section>
+            <h2>The Colour of Love</h2>
+            <p>
+                She told me once that her favorite color was blue. And ever since that day, I haven’t seen blue the same way. It’s in everything now—the sky stretching endlessly above us, the waves that crash and retreat like the rhythm of her laughter, the way the evening settles softly, wrapping the world in quiet serenity. Blue used to be just a color, but now, it feels like a feeling. Like her.</br>
+                </br>
+                She is the kind of blue that feels like home. The kind that turns silence into comfort and storms into something beautiful. She is the color of open skies and deep oceans, of freedom and depth, of something too vast to fully understand but too breathtaking to ever look away from.</br>
+                </br>
+                She is not just a color—she is a story, a song, a masterpiece painted in shades of love. And if love had a color, it would be blue. It would be her.
+            </p>
+            <audio controls>
+                <source src="hehe.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+        <aside>
+            <img src="pic1.jpg" alt="Image 1">
+            <img src="mybaby.jpeg" alt="Image 2">
+            <img src="pic2.jpeg" alt="Image 3">
+            <img src="wallpaper.jpg" alt="Image 4">
+        </aside>
+    </article>
+
+    <footer>
+        <p>Is this heaven?</p>
+    </footer>
+
+</body>
+</html>
